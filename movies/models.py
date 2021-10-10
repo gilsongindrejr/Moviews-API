@@ -24,4 +24,4 @@ class Rating(models.Model):
     comment = models.TextField(_('comment'), max_length=255)
 
     def __str__(self):
-        return f'{self.user} rated {self.rating} on movie {self.movie}'
+        return f'{self.user.first_name} {self.user.last_name} rated {self.rating} on movie {self.movie}'
